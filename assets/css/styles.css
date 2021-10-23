@@ -109,11 +109,144 @@ img {
 }
 
 /* Layout */
+.bd-grid {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: var(--mb-4);
+    margin-right: var(--mb-2);
+}
+
+.l-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--dark-color-lighten);
+}
+
 
 /* Nav */
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+.nav_menu {
+    position: fixed;
+    top: var(--header-height);
+    left: -100%;
+    width: 70%;
+    height: 100vh;
+    padding: 2rem;
+    background-color: var(--white-color);
+    transition: .5s;
+}
+}
+
+.nav_item {
+    margin-bottom: var(--mb-4);
+}
+
+.nav_logo {
+    font-weight: var(--font-semi-bold);
+}
+
+.nav_toggle, .nav_shop {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
 
 /* Show menu */
+.show {
+    left: 0;
+}
 
 /* Active link */
+.active {
+    position: relative;
+}
+
+.active::before {
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    left: 45%;
+    width: 4px;
+    height: 4px;
+    background-color: var(--dark-color);
+    border-radius: 50%;
+}
 
 /* Change color header */
+.scroll-header {
+    background-color: var(--white-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
+
+/* home */
+.home {
+    background-color: var(--dark-color-lighten);
+    overflow: hidden;
+}
+
+.home_container {
+    height: calc(100vh - var(--header-height));
+}
+
+.home_sneaker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.home_shape {
+    width: 220px;
+    height: 220px;
+    background-color: var(--dark-color);
+    border-radius: 50%;
+}
+
+.home_img {
+    position: absolute;
+    top: 1.5rem;
+    max-width: initial;
+    width: 275px;
+    transform: var(--rotate-img);
+
+}
+
+.home_new {
+    display: block;
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: var(--mb-2);
+}
+
+.home_title {
+    font-size: var(--bigger-font-size);
+    margin-bottom: var(--mb-1);
+
+}
+
+.home_description {
+    margin-bottom: var(--mb-6);
+    
+}
+
+/* buttons */
+
+
+/* Featured */
+
+/* collection */
+
+/* women sneakers */

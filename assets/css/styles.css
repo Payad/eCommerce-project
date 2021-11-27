@@ -106,6 +106,20 @@ img {
     position: relative;
     font-size: var(--big-font-size);
     margin-bottom: var(--mb-4);
+    text-align: center;
+    letter-spacing: .1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 56px;
+    height: .18rem;
+    top: -1rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: var(--dark-color);
 }
 
 /* Layout */
@@ -453,7 +467,7 @@ img {
 .new_sneaker {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(autofit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .new_sneaker-card {
@@ -587,7 +601,7 @@ img {
         margin: 0;
     }
 
-    .SECTION {
+    .section {
         padding: 7rem 0 3rem;
     }
 

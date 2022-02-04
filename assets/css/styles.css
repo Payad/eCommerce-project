@@ -56,6 +56,8 @@
     display: none;
 } */
 
+
+
 @media screen and (min-width: 768px) {
     :root {
 --big-font-size: 1.5rem;
@@ -100,11 +102,26 @@ h1,h2,h3,p,ul {
 ul {
     padding: 0;
     list-style: none;
+   
 }
 
-ul.nav_list {
+/* ul.nav_list {
     display: none;
+} */
+
+div#nav-menu {
+    position: relative;
+    margin-top: 80%;
+    /* margin-top: 50%; */
+    /* right: 60%; */
+    /* margin-left: 120px; */
+    /* margin-left: 20px; */
 }
+
+/* .logo {
+    position: fixed;
+    margin-left: 20%;
+} */
 
 a {
     text-decoration: none;
@@ -274,6 +291,10 @@ img.sneaker_img.shopImg10 {
     padding: 5rem 0 2rem;
 }
 
+.featured.section {
+    margin-top: 40%;
+}
+
 .section-title {
     position: relative;
     font-size: var(--big-font-size);
@@ -321,11 +342,26 @@ img.sneaker_img.shopImg10 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+}
+
+.nav_menu {
+    display: none;
+}
+
+ul.nav_list.normal {
+    margin-left: -360%;
+}
+
+ul.nav_list.shop {
+    /* margin-right: -15px; */
+    /* margin-left: -140px; */
+    margin-left: -145px;
 }
 
 @media screen and (min-width: 768px) {
 .nav_menu {
-    /* position: fixed; */
+    position: fixed;
     top: var(--header-height);
     /* left: -100%; */
     width: 70%;
@@ -333,6 +369,19 @@ img.sneaker_img.shopImg10 {
     padding: 2rem;
     background-color: var(--white-color);
     transition: .5s;
+    display: initial;
+    margin-left: 120px;
+}
+
+div#nav-menu {
+    position: relative;
+    top: 0;
+    margin-top: 11%;
+    margin-right: 10%;
+}
+
+ul.nav_list.normal {
+    margin-left: 0%;
 }
 
 .bxs-grid:before {
@@ -346,31 +395,60 @@ img.sneaker_img.shopImg10 {
     margin-top: -140px;
     margin-bottom: -55%;
 }
-
 .sneaker_name.AirZoom {
     font-size: 12px;
 } */
 }
 
+div#nav-menu {
+    position: relative;
+    /* top: 0; */
+    /* margin-top: 0; */
+}
+
 .nav_item {
-    margin-bottom: var(--mb-4);
+    /* margin-bottom: var(--mb-4); */
+    margin-bottom: var(--mb-1);
 }
 
 .nav_logo {
     font-weight: var(--font-semi-bold);
     font-size: 10px;
+    margin-left: -90%;
     /* margin-right: 70%; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 110px;
+    /* margin-right: 610px; */
+    margin-top: 23px;
+
 }
+
+/* .nav_logo {
+    position: absolute;
+    
+    left: 0;
+    margin-left: 10%;
+    margin-top: 32px;
+} */
 
 .nav_toggle, .nav_shop {
     font-size: 1.3rem;
     cursor: pointer;
 }
 
+.nav_shop {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 10px;
+}
 
 /* Show menu */
 .show {
     left: 0;
+    display: initial;
 }
 
 /* Active link */
@@ -399,6 +477,9 @@ img.sneaker_img.shopImg10 {
 .home {
     /* background-color: var(--dark-color-lighten); */
     overflow: hidden;
+    /* margin-top: 40%; */
+    margin-top: 20%;
+    margin-bottom: -30%;
 }
 
 .home_container {
@@ -573,7 +654,6 @@ img.sneaker_img.shopImg5 {
     margin-top: -82%;
     margin-bottom: -38%;
 }
-
 .sneaker_name.AirZoom {
     font-size: 12px;
 } */
@@ -828,6 +908,7 @@ img.collection_img.collections2 {
 .footer_social {
     font-size:  1.5rem;
     margin-right: 1.25rem;
+    /* margin-left: 20px; */
 }
 
 .footer_copy {
@@ -836,6 +917,7 @@ img.collection_img.collections2 {
     color: var(--dark-color-light);
     text-align: center;
 }
+
 
 /* media queries */
 @media screen and (min-width: 576px) {
@@ -925,6 +1007,12 @@ img.new_mens-img.mensShoeImg {
         margin: 0;
     }
 
+    .home {
+        margin-left: 15%;
+        overflow: visible;
+        margin-top: 0%;
+    }
+
     .section {
         padding: 7rem 0 3rem;
     }
@@ -935,6 +1023,16 @@ img.new_mens-img.mensShoeImg {
 
     .nav {
         height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .nav_logo {
+        font-weight: var(--font-semi-bold);
+        font-size: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 60px;
+        margin-top: 28px;
     }
 
     .nav_menu {
@@ -1067,15 +1165,31 @@ img.new_mens-img.mensShoeImg {
         display: block;
     }
 
+    .nav_logo {
+        position: absolute;
+        /* right: 200px; */
+        left: 0;
+        margin-left: 10%;
+        margin-top: 32px;
+    }
+
     ul.nav_list {
         display: flex;
-        margin-top: 245px;
+        margin-top: 238px;
         margin-left: 38%;
+    }
+
+    ul.nav_list.normal {
+        margin-left: 11%;
     }
     
     .bd-grid {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .home {
+        margin-left: 20%;
     }
 
     .home_container {
